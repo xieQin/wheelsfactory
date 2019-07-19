@@ -1,13 +1,8 @@
-const throttle = (func, wait) => {
+const throttle = (func, delay) => {
   let timer
   return function () {
     let last = timer, now = Date.now()
-    if (now - last >= wait) {
-      timer = now
-      func.apply(this, arguments)
-      return
-    }
-    if (last + delay > now) return
+    if (now < last + delay) return
     timer = now
     func.apply(this, arguments)
   }

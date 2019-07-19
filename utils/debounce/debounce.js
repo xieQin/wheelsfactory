@@ -1,14 +1,14 @@
 const debounce = (func, wait, immediate) => {
-  let _debounceId = null, result
+  let timer = null, result
   if (!immediate) {
     result = func.apply(context, args)
   }
   return function () {
     let ctx = this, args = arguments
-    if (_debounceId) {
-      clearTimeout(_debounceId)
+    if (timer) {
+      clearTimeout(timer)
     }
-    _debounceId = setTimeout(() => {
+    timer = setTimeout(() => {
       result = func.apply(ctx, args)
       return result
     }, wait)

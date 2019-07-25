@@ -5,3 +5,5 @@
 节流函数
 
 ### sleep
+
+### currying

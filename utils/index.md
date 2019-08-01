@@ -9,3 +9,9 @@
 ### currying
 
 ### trampoline
+
+### call
+
+### apply
+
+### bind

@@ -9,6 +9,10 @@
 - 函数防抖 debounce
 - sleep函数
 - currying 柯里化
+- generator自执行函数
+- call
+- apply
+- bind
 
 ### python相关
 - [word转html](https://github.com/xieQin/word2html)

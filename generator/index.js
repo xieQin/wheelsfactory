@@ -4,8 +4,8 @@ function* generator() {
     resolve(1)
   })
   console.log('generator 1')
-  console.log('generator 1')
   yield new Promise((resolve, reject) => {
+    console.log('generator 2')
     resolve(2)
   })
 }

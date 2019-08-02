@@ -1,11 +1,20 @@
-const babel = require("babel-core");
+const babel =  require('babel-core')
+const classPlugin =  require('./plugins/class.js')
+const mathPlugin =  require('./plugins/index.js')
 
-const jscode = `const result = 1 + 2 + 3;`
+const jscode = `
+class Foo {
+  constructor () {
+    this.a = 1
+  }
+  bar () {
+    console.log(this.a)
+  }
+}
+`
 
 const result = babel.transform(jscode, {
-  plugins:[
-    require("./plugins/index")
-  ]
-});
+  plugins: [classPlugin]
+})
 
-console.log(result.code); // const result = 6;
+console.log(result.code)

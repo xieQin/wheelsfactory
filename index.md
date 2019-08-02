@@ -14,6 +14,15 @@
 - apply
 - bind
 
+### 构建相关
+- webpack
+ - 自定义webpack loader
+- babel
+ - 自定义babel插件
+
+### 算法实现
+- virtualdom diff patch 虚拟dom
+
 ### python相关
 - [word转html](https://github.com/xieQin/word2html)
 - [图片验证码识别](https://github.com/xieQin/pytorch-captcha)

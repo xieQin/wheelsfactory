@@ -13,6 +13,8 @@
 - call
 - apply
 - bind
+- new
+- trampoline
 
 ### 构建相关
 - webpack

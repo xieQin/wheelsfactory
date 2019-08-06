@@ -25,5 +25,6 @@ function co(gen) {
 
   return autoRun(iterator.next());
 }
-
-co(generator)
+let gen = generator()
+console.log(gen.next())
+// co(generator)

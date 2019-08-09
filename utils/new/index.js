@@ -1,7 +1,7 @@
 function myNew(target, ...args) {
   let obj = Object.create(target.prototype)
   let res = target.apply(obj, args)
-  return typeof res === 'object' ? res : obj
+  return res != null && (typeof res === 'object' || typeof res === 'function') ? res : obj
 }
 
 function foo (name) {

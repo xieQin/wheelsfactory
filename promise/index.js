@@ -7,6 +7,9 @@ function MyPromise (executor) {
   _self.onRejectedCallbacks = [];
 
   function resolve (result) {
+    if (result instanceof MyPromise) {
+      return result.then()
+    }
     if (_self.status === 'pending') {
       _self.status = 'fulfilled';
       _self.value = result;

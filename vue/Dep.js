@@ -1,5 +1,5 @@
 const Dep = function () {
-  const selft = this
+  const self = this
 
   // 收集依赖的目标
   this.target = null
@@ -9,8 +9,9 @@ const Dep = function () {
   // 有目标时，绑定Dep与Watcher的关系
   this.depend = function () {
     if (Dep.target) {
-      // 等价于 Self.addSub(Dep.target)
-      Dep.target.addDep(self)
+      // 等价于 self.addSub(Dep.target)
+      // Dep.target.addDep(self)
+      self.addSub(Dep.target)
     }
   }
 

@@ -10,8 +10,7 @@ const Dep = function () {
   this.depend = function () {
     if (Dep.target) {
       // 等价于 self.addSub(Dep.target)
-      // Dep.target.addDep(self)
-      self.addSub(Dep.target)
+      Dep.target.addDep(self)
     }
   }
 

@@ -8,8 +8,8 @@ const Watcher = function (vm, fn) {
   Dep.target = this
 
   // 向Dep方法添加当前的Watcher
-  this.addDep = function () {
-    Dep.addSub(self)
+  this.addDep = function (dep) {
+    dep.addSub(self)
   }
 
   // 更新，触发Vue 组件的_render方法

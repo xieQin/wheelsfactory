@@ -22,7 +22,7 @@
 ### 三、框架相关
 #### 3.1 Vue
  - Vue响应式原理
-### 3.2 Virtual Dom
+#### 3.2 Virtual Dom
 - virtualdom diff patch 虚拟dom
 
 ### 四、python相关

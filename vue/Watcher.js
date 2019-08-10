@@ -18,7 +18,7 @@ const Watcher = function (vm, fn) {
     fn()
   }
 
-  // 调用vm._render, 处罚数据的get方法，将当前的Watcher与Dep关联起来
+  // 调用vm._render, 触发数据的get方法，将当前的Watcher与Dep关联起来
   this.value = fn()
   // 清空Dep.target，防止notify触发时，不停的绑定Watcher与Dep
   Dep.target = null

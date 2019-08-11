@@ -17,3 +17,12 @@
 ### bind
 
 ### new
+
+### deepClone
+深拷贝
+
+### instanceof
+
+### deepCompare
+
+### json

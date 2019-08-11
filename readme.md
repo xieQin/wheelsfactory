@@ -12,6 +12,10 @@
 - bind
 - new
 - trampoline
+- deepClone
+- instanceof
+- deepCompare
+- json
 
 ### 二、构建相关
 #### 2.1 webpack

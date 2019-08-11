@@ -6,6 +6,16 @@ Function.prototype.newBind = function (ctx, ...params) {
   }
 }
 
+Function.prototype.newBind2 = function () {
+  let fn = this
+  let args = Array.prototype.slice.call(arguments)
+  let ctx = args.shift()
+  return function () {
+    let newArgs = args.concat(Array.prototype.slice.call(arguments))
+    return fn.apply(ctx, newArgs)
+  }
+}
+
 let foo = {
   name: 'hello'
 }
